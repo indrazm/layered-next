@@ -2,9 +2,9 @@ import { NoteRepo } from "@/infrastructure/db/noteRepo";
 import { UserRepo } from "@/infrastructure/db/userRepo";
 import { TYPES } from "@/infrastructure/types";
 import { Container } from "inversify";
-import { NoteService } from "./noteService";
+import { NoteService } from "./services/noteService";
 import { SessionRepo } from "@/infrastructure/db/sessionRepo";
-import { AuthService } from "./authService";
+import { AuthService } from "./services/authService";
 
 const container = new Container();
 

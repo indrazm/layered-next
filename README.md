@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Layered Architecture for Fullstack Next.js Applications
 
-## Getting Started
+### Folder Structure
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+- app
+- applications
+- infrastructure
+- utils
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### App
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The `app` folder contains the Next.js application. This is where the frontend code lives which is the presentation
+layer of the application.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Applications
 
-## Learn More
+The `applications` folder contains the business logic of the application. This is where the application services and
+use cases live.
 
-To learn more about Next.js, take a look at the following resources:
+### Infrastructure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The `infrastructure` folder contains the implementation details of the application. This is where the database operations happen.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Utils
 
-## Deploy on Vercel
+The `utils` folder contains utility functions that can be used across the application.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Presentation Layer
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The presentation layer is the frontend of the application. It is responsible for rendering the user interface and
+interacting with the user. The presentation layer is built using Next.js which is a React framework.
+
+It would be in the `app` folder. And it would contain the following folders:
+
+```
+- _components
+- api
+- all other frontend code
+```
+
+### Components
+
+The `_components` folder contains all the reusable components that are used across the application. This is conventional next.js folder to make certain folder private inside the app folder.
